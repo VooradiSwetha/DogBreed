@@ -1,28 +1,47 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <nav class="navbar navbar-expand-sm SetUp">
+      <router-link :to="{name:'HomePage'}"  class="navbar-brand" exact>Dog Breed</router-link>  
+    </nav>
+    <router-view />
+    
+        
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import BreedImages from './components/BreedImages.vue'
+// import HomePage from './components/HomePage.vue'
+
 
 export default {
-  name: 'App',
+  name:'App',
   components: {
-    HelloWorld
+   
+
   }
 }
+ 
 </script>
+
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family:  Helvetica, Arial , sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #020c16;
+ 
+}
+
+.SetUp {
+  background-color:rgb(156, 161, 84);
+  padding: 15px !important;  
+}
+
+.SetUp a {
+  color:rgb(30, 16, 156);
+  font-weight: bold;
 }
 </style>
