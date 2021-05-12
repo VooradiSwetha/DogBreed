@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HomePage from './components/HomePage'
-import BreedImages from './components/BreedImages'
-import SubBreeds from './components/SubBreeds'
-import Error from './components/Error'
+import HomePage from './views/HomePage'
+import BreedImages from './views/BreedImages'
+import SubBreed from './components/SubBreed'
+import Error from './views/Error'
 
 Vue.use(Router);
 
@@ -22,13 +22,13 @@ export default new Router({
             props: true
         },
         {
-            path:'/SubBreed/:Search',
-            name:'SubBreeds',
-            component: SubBreeds,
+            path:'/SubBreed/:BreedNameForSearch',
+            name:'SubBreed',
+            component: SubBreed,
             props: true
         },
         {
-            path:'/Error/:erorMsg',
+            path:'/Error/:ErorMsg',
             name:'Error',
             component: Error,
             props: true
